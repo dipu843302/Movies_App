@@ -1,8 +1,10 @@
 package com.example.movies_app.frontpage
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -30,6 +32,9 @@ class MainActivity : AppCompatActivity(),ItemClickListner {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // after scrolling , text change Movies to Now showing
+        textChange()
+
         val api=Network.getInstance().create(MovieApi::class.java)
         val repository=MovieRepository(api)
 
@@ -51,6 +56,7 @@ class MainActivity : AppCompatActivity(),ItemClickListner {
             }
 
         })
+
     }
 
     private fun setViewPager(){
@@ -59,8 +65,8 @@ class MainActivity : AppCompatActivity(),ItemClickListner {
     }
 
     private fun setRecycle(){
-        recycler2.adapter=MoviesAdapter(moivesList,this)
-        recycler2.layoutManager=GridLayoutManager(this,3)
+        recycler.adapter=MoviesAdapter(moivesList,this)
+        recycler.layoutManager=GridLayoutManager(this,3)
     }
 
     override fun ItemClick(nowShowing: NowShowing, position: Int) {
@@ -72,6 +78,22 @@ class MainActivity : AppCompatActivity(),ItemClickListner {
         intent.putExtra("date",nowShowing.releaseDate)
         intent.putExtra("rating",nowShowing.contentRating)
         startActivity(intent)
+    }
+
+    private fun textChange(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            nestedScrollView.setOnScrollChangeListener(object : View.OnScrollChangeListener {
+                override fun onScrollChange(p0: View?, p1: Int, p2: Int, p3: Int, p4: Int) {
+
+                    if (p2 >= 500) {
+                        tvHeader.text = "Now Showing"
+                    } else {
+                        tvHeader.text = "Movies"
+                    }
+                }
+
+            })
+        }
     }
 
 }

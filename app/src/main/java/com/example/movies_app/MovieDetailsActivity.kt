@@ -7,8 +7,7 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_movie_details.*
 import com.bumptech.glide.Glide
-
-
+import com.example.movies_app.frontpage.MainActivity
 
 
 class MovieDetailsActivity : AppCompatActivity() {
@@ -16,6 +15,11 @@ class MovieDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
+
+        back.setOnClickListener {
+            val intent:Intent=Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         val  intent:Intent = getIntent()
 
@@ -26,9 +30,9 @@ class MovieDetailsActivity : AppCompatActivity() {
         tvRating.setText(intent.getStringExtra("rating"))
         tvTittle.setText(intent.getStringExtra("tittle"))
 
-        tvposter.setImageResource( intent.getIntExtra("poster",0))
+       // tvposter.setImageResource( intent.getIntExtra("poster",0))
 
-       // Toast.makeText(this,tvposter,Toast.LENGTH_LONG).show()
+
 
         if (getIntent().hasExtra("poster")) {
             val imageUrl = getIntent().getStringExtra("poster")
