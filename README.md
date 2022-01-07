@@ -5,9 +5,13 @@ This is movie app .There are multiple movies available here and also you can see
 
 |**Home Screen**|**Movies**|**Movies Details**|
 |:---|:--|:-|
-|<img src=https://user-images.githubusercontent.com/86510520/148520573-eb9f027f-39fd-4ab2-9b36-034b5384505f.jpeg height="500px" width="350px"/>
-|<img src=https://github.com/dipu843302/Tata_1mg/blob/master/Tata%201mg/register.jpg height="500px" width="350px"/>
-|<img src=https://github.com/dipu843302/Tata_1mg/blob/master/Tata%201mg/product.jpg height="500px" width="350px"/>
+|<img src=https://user-images.githubusercontent.com/86510520/148520573-eb9f027f-39fd-4ab2-9b36-034b5384505f.jpeg height="500px" width="350px"/>|<img src=https://user-images.githubusercontent.com/86510520/148521094-b1de3d89-bc90-4b64-85f8-5f5b540c8242.jpeg height="500px" width="350px"/>|<img src=https://user-images.githubusercontent.com/86510520/148521298-c1d3d1bc-a70d-4ec4-bd4c-630a45c8071b.jpeg height="500px" width="350px"/>
+
+
+
+
+
+
 
 
 
