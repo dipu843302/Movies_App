@@ -23,6 +23,7 @@ This is movie app .There are multiple movies available here and also you can see
 * Retrofit
 * ViewPager
 
+
 ## Features
 * You can see the multiple movies poster
 * Formate of recycler view and viewpager
