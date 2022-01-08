@@ -8,7 +8,7 @@ import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.movies_app.MovieDetailsActivity
+import com.example.movies_app.movie_details.MovieDetailsActivity
 import com.example.movies_app.R
 import com.example.movies_app.adapter.MoviesAdapter
 import com.example.movies_app.api.MovieApi
