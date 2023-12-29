@@ -1,5 +1,5 @@
 # Movies_App
-This is movie app .There are multiple movies available here and also you can see rating , release date and story of the movies .
+This is a movie app featuring a diverse selection of films. Users can explore multiple movies on the platform and access additional details such as ratings, release dates, and movie summaries.
 
 ## Screenshots
 
